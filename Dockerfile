@@ -6,6 +6,7 @@ COPY Gemfile /rails-tutorial/Gemfile
 COPY Gemfile.lock /rails-tutorial/Gemfile.lock
 RUN bundle install
 COPY . /rails-tutorial
+ENV RUBYOPT -EUTF-8
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
